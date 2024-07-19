@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+}
+
+form {
+    display: flex;
+    flex-flow: column;
+    gap: 30px;
+    align-items: center
+}
+
+.register {
+    padding: 5px 20px;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+button {
+    padding: 5px 20px;
+}
+
+button a {
+    text-decoration: none;
+    color: black;
+}
+
+/* End of create.html */
+
+/* Start read_all.html */
+
+table {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+tr {
+    display: flex;
+    gap: 20px;
+}
+
+th, td {
+    border-bottom: black 1px solid;
+}
+
+td a {
+    text-decoration: none;
+}
+
+/* END OF read_all.html */
+
+/* START OF read_one.html */
+
+.read_one_box {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.read_one_info {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 20px;
+}

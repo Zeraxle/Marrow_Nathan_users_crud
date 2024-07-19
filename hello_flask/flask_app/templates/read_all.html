@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read All</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/users_crud_style.css') }}">
+</head>
+<body>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>first_name</th>
+            <th>last_name</th>
+            <th>email</th>
+            <th>created_at</th>
+            <th>actions</th>
+        </tr>
+        {% for user in users%}
+        <tr>
+            <td>{{user['id']}}</td>
+            <td>{{user['first_name']}}</td>
+            <td>{{user['last_name']}}</td>
+            <td>{{user['email']}}</td>
+            <td>{{user['created_at']}}</td>
+            <td>
+                <a href="/read_one/{{user.id}}">Read One</a>|
+                <a href="/user/edit/{{user.id}}">Edit</a>|
+                <a href="/user/delete/{{user.id}}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <button><a href="/user/create">Add New User</a></button>
+</body>
+</html>
